@@ -1,0 +1,152 @@
+.sort_container {
+  max-width: 280px;
+}
+
+.sort {
+  background: #FFF4EE;
+  padding: 20px 20px 0px 20px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #444B58;
+    margin-bottom: 20px;
+
+  }
+   p, th, span {
+    font-size: 16px;
+    font-weight: 400;
+    list-style: none;
+    color: #444B58;
+    margin-bottom: 10px
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    text-align: center;
+  
+    li {
+      display: flex;
+      width: 80px;
+      height: 57px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1.143px 0px 0px 0px;
+      border: 1px solid #DBBBA9;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      font-size: 16px;
+      font-weight: 400;
+      list-style: none;
+      color: #444B58;
+  
+      &:hover {
+        background-color: darken(#DBBBA9, 2%);
+      }
+  
+      &:active {
+        background-color: darken(#DBBBA9, 5%);
+      }
+  
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.sort_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox_other {
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+}
+
+.checkbox_other input[type=checkbox] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.checkbox_other span {
+	display: inline-block;
+	position: relative; 
+	padding: 0 0 0 35px; 
+	line-height: 22px;    
+}
+
+.checkbox_other span:before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url('../../img/check.png') 0 0 no-repeat;
+}
+ 
+/* Checked */
+.checkbox_other input[type=checkbox]:checked + span:before {
+	background-image: url('../../img/check+.png');
+  top: 5px;
+  left: 5px;
+}
+ 
+/* Focus */
+.focused span:before {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover */
+.checkbox_other span:hover:before {
+	filter: brightness(110%);
+}
+
+.table_size {
+  display: flex;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.sort_button{
+  display: flex;
+  width: 241px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--sec-bg, #FFF4EE);
+  background: #FFF4EE;
+  color: #444B58;
+  margin: 0;
+
+  &:hover {
+    background-color: darken(#444B58, 2%);
+    color:#fff;
+  }
+
+  &:active {
+    background-color: darken(#DBBBA9, 5%);
+  }
+
+  &.active {
+    background-color: #282828;
+    color: #fff;
+  }
+}

@@ -1,0 +1,58 @@
+.sneakblock{
+  display: flex;
+  flex-wrap: wrap;
+
+  .sneakblock_item{
+    margin: 0px 0px 20px 20px;
+    max-width: 280px;
+    position: relative;
+
+    &_block{
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+  &_title {
+    color: #444B58;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 10px 10px 0px;
+  }
+
+  &_price {
+    color: #444B58;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &_img_addcart{
+    width: 60px;
+    height: 60px;
+  }
+
+  &_button_addcart{
+    background: #fff;
+    width: 250px;
+    height: 65px;
+    margin: 10px 0px 0px 0px;
+    padding: 0;
+    
+    i {
+      color: #444B58;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .sneakblock_button{
+    width: 200px;
+    margin-bottom: 60px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

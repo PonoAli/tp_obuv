@@ -1,0 +1,40 @@
+.wrap_info {
+  background: #484283;
+  background-image: url('../../img/figures.png');
+  background-size: initial;
+  background-repeat: no-repeat;
+}
+
+.info {
+  display: flex;
+  max-height: 580px;
+
+  &_text{
+    margin-top: 222px;
+    margin-right: 135px;
+
+    h1{
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 380px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%;
+      margin-bottom: 20px;
+      margin-right: 30px;
+    }
+
+    h2 {
+      font-family: "Intro-Book";
+      font-size: 20px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    &_image{
+      margin: 0;
+    }
+  }
+}

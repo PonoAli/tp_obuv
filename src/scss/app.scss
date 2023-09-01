@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+@font-face {
+  font-family: "Intro-Bold";
+  src: url('../fonts/Intro-Bold.ttf')
+}
+
+@font-face {
+  font-family: "Intro-Book";
+  src: url('../fonts/Intro-Book.ttf')
+}
+
+@font-face {
+  font-family: "Intro-Regular";
+  src: url('../fonts/Intro-Regular.ttf')
+}
+
+body {
+  font-family: "Intro-Regular", sans-serif;
+}
+
+.wrapper{
+  background: #484283;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  width: calc(100vw - 100px);
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 1200px;
+}
+
+button {
+  width: 250px;
+  height: 60px;
+  background: #F14F4F;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
