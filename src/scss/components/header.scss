@@ -1,59 +1,49 @@
 .header {
   display: flex;
-  justify-content: center;
-  
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 645px) {
+    flex-direction: column;
+
+    .header_menu li{
+      margin-right: 10px;
+    }
+
+    .header_logo{
+      font-weight: 500;
+    }
   }
-  .conteiner_header {
-    display: flex;
-    flex-grow: 1;
-    background: #484283;
-    margin: 20px 0;
-    padding: 0;
-    justify-content: space-between;
-  }
-  
-  .header_logo {
-    
+
+  &_logo {
     font-size: 30px;
     font-weight: 700;
     cursor: pointer;
+    margin: 20px 0px 20px 0px;
   }
-  
-  .header_menu{
-    margin-left: 220px;
+
+  &_menu{
     display: flex;
     align-items: center;
-  }
-  
-  .header_menu_list {
-    display: flex;
-    list-style: none;
-  }
-  
-  .header_menu_item {
-    margin-right: 40px;
-  }
-  
-  .header_menu_item a {
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .header_cart img {
+
+    li {
+      margin-right: 40px;
+    }
+  } 
+
+  &_cart img {
     width: 20px;
     height: 20px;
     margin-left: 10px;
     cursor: pointer;
   }
-  
-  hr{
-    background: rgba(255, 255, 255, 0.50);
-    -webkit-margin-start: auto;
-    -webkit-margin-end: auto;
-    width: 1200px;
-  }
+}
+
+hr {
+  background: rgba(255, 255, 255, 0.50);
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+}
   
   .block_start{
     background-image: url('../../img/fontext.svg');
@@ -61,16 +51,29 @@
     background-size: initial;
     background-repeat: no-repeat;
     margin: 0 auto;
+    
+    @media (max-width: 645px) {
+      background-image: none;
+
+      .block_title h1 {
+        margin-top: 50px;
+      }
+
+      button{
+        margin-bottom: 50px;
+      }
+    }
   }
   
   .block_title {
+
     h1 {
       font-size: 36px;
       font-weight: 400;
       line-height: 140%;
       justify-content: space-between;
       max-width: 580px;
-      margin-top: 100px;
+      padding-top: 100px;
       margin-bottom: 20px;
     }
   
@@ -95,17 +98,4 @@
     border: none;
     margin-bottom: 100px;
     cursor: pointer;
-  }
-  
-  
-  .sort_h1 {
-      font-size: 30px;
-      font-weight: 700;
-      color: #444B58;
-      margin-top: 60px;
-      margin-bottom: 40px;
-  }
-  
-  .catalog{
-    display: flex;
   }

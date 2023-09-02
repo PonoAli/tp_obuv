@@ -5,7 +5,7 @@ import inst from '../img/Instagram.svg'
 
 export const Contaсt = () => {
   return (
-    <div className='container'>
+    <div id='contact' className='container'>
       <div className='contact'>
         <div>
           <div className='contact_block'>

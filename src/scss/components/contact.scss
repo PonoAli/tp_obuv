@@ -3,6 +3,10 @@
   margin-top: 61px;
   justify-content: space-between;
 
+  @media (max-width: 645px) {
+    flex-direction: column;
+  }
+
   &_block {
     h1 {
       font-family: Intro Bold;
@@ -98,5 +102,28 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 40px;
+    
+  }
+
+  @media (max-width: 479px) {
+    margin-left: -20px;
+    width: 270px;
+    height: 382px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 480px) {
+    width: 280px;
+    height: 382px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 23px;
+    }
   }
 }

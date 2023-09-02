@@ -28,10 +28,11 @@
   ul {
     display: flex;
     text-align: center;
+    flex-wrap: wrap;
   
     li {
       display: flex;
-      width: 80px;
+      width: 78px;
       height: 57px;
       align-items: center;
       justify-content: center;
@@ -43,6 +44,11 @@
       font-weight: 400;
       list-style: none;
       color: #444B58;
+
+      @media (max-width: 645px) {
+        width: 74px;
+        height: 57px;
+      }
   
       &:hover {
         background-color: darken(#DBBBA9, 2%);
@@ -60,6 +66,12 @@
   }
 }
 
+.sort_h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #444B58;
+  margin-bottom: 40px;
+}
 .sort_box {
   display: flex;
   justify-content: space-between;
@@ -135,6 +147,11 @@
   background: #FFF4EE;
   color: #444B58;
   margin: 0;
+
+  @media (max-width: 645px) {
+    width: 235px;
+    height: 60px;
+  }
 
   &:hover {
     background-color: darken(#444B58, 2%);

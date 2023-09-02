@@ -1,0 +1,8 @@
+.catalog {
+  display: flex;
+  margin-top: 60px;
+
+  @media (max-width: 599px) {
+    flex-direction: column;
+  }
+}
