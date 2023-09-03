@@ -1,5 +1,6 @@
 .sort_container {
   max-width: 280px;
+  margin-bottom: 100px;
 }
 
 .sort {
@@ -32,7 +33,7 @@
   
     li {
       display: flex;
-      width: 78px;
+      width: 74px;
       height: 57px;
       align-items: center;
       justify-content: center;
@@ -59,7 +60,7 @@
       }
   
       &.active {
-        background-color: #282828;
+        background-color: #DBBBA9;
         color: #fff;
       }
     }
@@ -130,10 +131,12 @@
 
 .table_size {
   display: flex;
-  background-color: #f3f3f3;
+  width: 240px;
+  background-color: #FFF4EE;
   border-radius: 10px;
   flex-direction: column;
   padding: 6px;
+  padding-bottom: 60px;
 }
 
 .sort_button{

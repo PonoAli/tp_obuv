@@ -13,7 +13,7 @@
     "title": "Кроссовки Nike M Defy All Day",
     "types": 0,
     "price": 6000,
-    "category": 1
+    "category": 2
   },
   {
     "id": "2",
@@ -21,7 +21,7 @@
     "title": "Travis Scott x Nike Air Max 270 ",
     "types": 1,
     "price": 13000,
-    "category": 1
+    "category": 2
   },
   {
     "id": "3",
@@ -29,7 +29,7 @@
     "title": "Кроссовки Nike Tanjun",
     "types": 0,
     "price": 6950,
-    "category": 1
+    "category": 2
   },
   {
     "id": "4",
@@ -37,7 +37,7 @@
     "title": "Кроссовки Nike Air Force ",
     "types": 0,
     "price": 6700,
-    "category": 0
+    "category": 5
   },
   {
     "id": "5",
@@ -45,7 +45,7 @@
     "title": "Кроссовки Nike Air Zoom Tempo",
     "types": 1,
     "price": 10440,
-    "category": 1
+    "category": 6
   },
   {
     "id": "6",
@@ -53,7 +53,7 @@
     "title": "Кроссовки Nike Dunk Low",
     "types": 0,
     "price": 5940,
-    "category": 0
+    "category": 7
   },
   {
     "id": "7",
@@ -61,7 +61,7 @@
     "title": "Кроссовки Nike Air Max 90",
     "types": 1,
     "price": 740,
-    "category": 0
+    "category": 8
   },
   {
     "id": "8",
@@ -69,6 +69,6 @@
     "title": "Кроссовки Nike Revolution 6 Nn",
     "types": 0,
     "price": 12380,
-    "category": 1
+    "category": 0
   }
 ]

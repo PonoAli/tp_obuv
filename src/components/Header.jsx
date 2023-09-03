@@ -10,7 +10,9 @@ export const Header = () => {
     <div className='wrapper'>
       <div className='container'>
         <div className='header'>
-          <div className='header_logo'>SneakMax</div>
+          <Link to='/'>
+            <div className='header_logo'>SneakMax</div>
+          </Link>
           <div className='header_menu'>
             <AnchorLink href='#catalog'><li>Каталог</li></AnchorLink>
             <AnchorLink href='#info'><li>О нас</li></AnchorLink>
