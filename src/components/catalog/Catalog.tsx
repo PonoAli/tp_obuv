@@ -10,6 +10,7 @@ import '../../components/SneakBlock/SneakBlock.scss'
 import '../../scss/components/sort.scss'
 import { Categories } from './Categories';
 import { setCategoryId, setFilters } from '../../redux/slice/filterSlice';
+import { RootState } from '../../redux/store';
 
 export const Catalog: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const Catalog: React.FC = () => {
   const isSearch = useRef(true);
   const isMounted = useRef(false);
 
-  const {categoryId} = useSelector((state: any) => state.filter);
+  const {categoryId} = useSelector((state: RootState) => state.filter);
 
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -42,33 +43,37 @@ export const Catalog: React.FC = () => {
   }
   }
 
-  useEffect(() => {
-    if (isMounted.current) {
-      const queryString = qs.stringify({
-        categoryId
-      });
-      navigate(`?${queryString}`)
-    }
-    isMounted.current=true;
-  }, [categoryId]);
+  // useEffect(() => {
+  //   if (isMounted.current) {
+  //     const queryString = qs.stringify({
+  //       categoryId
+  //     });
+  //     navigate(`?${queryString}`)
+  //   }
+  //   isMounted.current=true;
+  // }, [categoryId]);
+
+  // useEffect(() => {
+  //   if(window.location.search) {
+  //     const params = qs.parse(window.location.search.substring(1))
+
+  //     dispatch(
+  //       setFilters({
+  //         ...params
+  //       })
+  //     )
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   if (!isSearch.current) {
+  //     fetchSneakers();
+  //   }
+  //   isSearch.current = false;
+  // }, [categoryId])
 
   useEffect(() => {
-    if(window.location.search) {
-      const params = qs.parse(window.location.search.substring(1))
-
-      dispatch(
-        setFilters({
-          ...params
-        })
-      )
-    }
-  })
-
-  useEffect(() => {
-    if (!isSearch.current) {
-      fetchSneakers();
-    }
-    isSearch.current = false;
+    fetchSneakers()
   }, [categoryId])
 
   return (
