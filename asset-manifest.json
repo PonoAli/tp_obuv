@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tp_obuv/static/css/main.fa509000.css",
-    "main.js": "/tp_obuv/static/js/main.f9f7a3f0.js",
+    "main.js": "/tp_obuv/static/js/main.02ea2490.js",
     "static/media/Mask Group.png": "/tp_obuv/static/media/Mask Group.7f3c6367ff41832ab514.png",
     "static/media/Intro-Book.ttf": "/tp_obuv/static/media/Intro-Book.cd9aac58a97d24734201.ttf",
     "static/media/Intro-Bold.ttf": "/tp_obuv/static/media/Intro-Bold.62034b9159ac021d21e9.ttf",
@@ -15,10 +15,10 @@
     "index.html": "/tp_obuv/index.html",
     "static/media/btn-remove.svg": "/tp_obuv/static/media/btn-remove.b1fef0aa93fbf25374f4991d23f900d8.svg",
     "main.fa509000.css.map": "/tp_obuv/static/css/main.fa509000.css.map",
-    "main.f9f7a3f0.js.map": "/tp_obuv/static/js/main.f9f7a3f0.js.map"
+    "main.02ea2490.js.map": "/tp_obuv/static/js/main.02ea2490.js.map"
   },
   "entrypoints": [
     "static/css/main.fa509000.css",
-    "static/js/main.f9f7a3f0.js"
+    "static/js/main.02ea2490.js"
   ]
 }
