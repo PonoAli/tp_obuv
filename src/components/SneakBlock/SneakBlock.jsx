@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from '../../redux/slice/cartSlice'
+
 import './SneakBlock.scss'
 import addcart from '../../img/addcart.png'
 
-export const SneakBlock = ({title, price, imageUrl}) => {
+export const SneakBlock = ({id, title, price, imageUrl}) => {
+  const dispatch = useDispatch();
+  const cartItem = useSelector(state => state.cart.items.find(obj => obj.id === id))
 
-  const [itemCount, setItemCount] = useState(0);
+  const addedCount = cartItem ? cartItem.count : 0;
 
-  const onClickAddButton=() => {
-    setItemCount(itemCount+1)
+  const onClickAdd = () => {
+    const item = {
+      id, title, price, imageUrl
+    }
+    dispatch(addItem(item))
   }
+
   return (
     <div className='sneakblock_item'>
       <img className='sneakblock_img' src={imageUrl} alt='sneak' />
@@ -17,9 +26,9 @@ export const SneakBlock = ({title, price, imageUrl}) => {
             <div className='sneakblock_title'>{title}</div>
             <div className='sneakblock_price'>{price} ₽ </div>
           </div>
-            <button onClick={onClickAddButton} className='sneakblock_button_addcart'>
+            <button onClick={onClickAdd} className='sneakblock_button_addcart'>
               <img className='sneakblock_img_addcart'  src={addcart} alt="Добавить"/>
-              <i>{itemCount}</i>
+              {addedCount>0 && <i>{addedCount}</i>}
             </button>
         </div>
     </div>

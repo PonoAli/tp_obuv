@@ -68,7 +68,7 @@
 
   h1{
     color: #fff;
-    font-family: Intro Bold;
+    font-family: 'Intro-Bold';
     font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
@@ -77,11 +77,11 @@
 
   p {
     color: #fff;
-    font-family: Intro Book;
+    font-family: 'Intro-Book';
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     width: 260px;
   }
 
@@ -89,9 +89,12 @@
     width: 340px;
     height: 60px;
     margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 4px;
     padding-left: 20px;
     border: none;
+    color: #444B58;
+    outline: none;
   }
 
   &_button{
@@ -103,6 +106,12 @@
     gap: 10px;
     margin-bottom: 40px;
     
+  }
+
+  &_button:disabled {
+    opacity: 0.5;
+    // background: #444B58;
+    // border: #fff;
   }
 
   @media (max-width: 479px) {
@@ -123,7 +132,13 @@
     }
 
     p {
-      font-size: 23px;
+      font-size: 20px;
     }
+  }
+
+  &_error{
+    color: red;
+    font-size: 14px;
+    font-family: 'Intro-Book';
   }
 }

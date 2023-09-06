@@ -26,12 +26,20 @@ export const Catalog = () => {
     dispatch (setCategoryId(id))
   }
 
- const fetchSneakers = () => {
-    setIsLoading(true)
-    axios.get(`https://64d09517ff953154bb791d42.mockapi.io/item?${categoryId>0 ? `category=${categoryId}` : ''}`).then(res => {
+
+ const fetchSneakers = async () => {
+  setIsLoading(true)
+  const category = categoryId>0 ? `category=${categoryId}` : '';
+
+  try{
+    const res = await 
+    axios.get(`https://64d09517ff953154bb791d42.mockapi.io/item?${category}`)
       setItems(res.data);
       setIsLoading(false)
-    })
+  } catch (error) {
+    setIsLoading(false);
+    console.log('Ошибка при загрузке каталога')
+  }
   }
 
   useEffect(() => {
@@ -74,7 +82,7 @@ export const Catalog = () => {
               {/* <Sort value={sortType} onChangeSort={(id) => setSortType(id)} /> */}
               <Categories value={categoryId} onChangeCategory={onChangeCategory}/>
               {/* <button className='sort_button'>Применить</button> */}
-              <button className='sort_button'>Сбросить</button>
+              <button onClick={() => {onChangeCategory([])}} className='sort_button'>Сбросить</button>
             </div>
           </div>
         </div>
@@ -84,11 +92,7 @@ export const Catalog = () => {
               [... new Array(3)].map((_, index) => <Skeleton key={index}/>)
               : items.map((obj) => 
               <SneakBlock 
-              key={obj.id}
-              title={obj.title}
-              price={obj.price}
-              imageUrl={obj.imageUrl}
-              types={obj.types}
+              key={obj.id} {...obj}
               />
             )}
           {/* <button className="sneakblock_button">Показать ещё</button> */}
