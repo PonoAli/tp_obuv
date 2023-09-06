@@ -3,6 +3,8 @@ import '../scss/components/contact.scss'
 import vk from '../img/VK.svg'
 import inst from '../img/Instagram.svg'
 
+type InputEvent = React.ChangeEvent<HTMLInputElement>;
+
 export const Contaсt: React.FC = () => {
   const [name, setName] = useState('');
   const [telephone, setTelephone] = useState('');
@@ -20,17 +22,17 @@ export const Contaсt: React.FC = () => {
     }
   }, [errorName, errorTele])
 
-  const telephoneHandler = (e) => {
+  const telephoneHandler = (e: InputEvent) => {
     setTelephone(e.target.value)
     setErrorTele('')
   }
 
-  const userNameHandler = (e) => {
+  const userNameHandler = (e: InputEvent) => {
     setName(e.target.value)
     setErrorName('')
   }
 
-  const blurHandler = (e) => {
+  const blurHandler = (e: InputEvent) => {
     switch (e.target.name) {
       case 'userName': 
         setNameDirty(true)

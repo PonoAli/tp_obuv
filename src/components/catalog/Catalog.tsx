@@ -3,13 +3,13 @@ import axios from 'axios';
 import qs from 'qs'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { SneakBlock } from '../SneakBlock/SneakBlock.tsx'
-import { Skeleton } from "../SneakBlock/Skeleton.tsx";
+import { SneakBlock } from '../SneakBlock/SneakBlock'
+import { Skeleton } from "../SneakBlock/Skeleton";
 import '../../scss/components/catalog.scss'
 import '../../components/SneakBlock/SneakBlock.scss'
 import '../../scss/components/sort.scss'
-import { Categories } from './Categories.tsx';
-import { setCategoryId, setFilters } from '../../redux/slice/filterSlice.ts';
+import { Categories } from './Categories';
+import { setCategoryId, setFilters } from '../../redux/slice/filterSlice';
 
 export const Catalog: React.FC = () => {
   const navigate = useNavigate();

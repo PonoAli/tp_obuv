@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { removeItem } from '../redux/slice/cartSlice.ts'
+import { removeItem } from '../redux/slice/cartSlice'
 
 import '../scss/components/cartModal.scss'
 import clear from '../img/trash 1.svg'

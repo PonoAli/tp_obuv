@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 
 import '../scss/components/cartModal.scss'
 import remove from '../img/btn-remove.svg'
-import { CartItems } from '../components/CartItems.tsx'
-import { CartEmpty } from '../components/CartEmpty.tsx'
+import { CartItems } from '../components/CartItems'
+import { CartEmpty } from '../components/CartEmpty'
 import { RootState } from '../redux/store'
 
 type CartProps = {

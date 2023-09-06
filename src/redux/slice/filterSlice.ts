@@ -15,7 +15,7 @@ const filterSlice = createSlice ({
     setCategoryId(state, action: PayloadAction<number>) {
       state.categoryId = action.payload;
     },
-    setFilters(state, action: PayloadAction<FilterSliceState>) {
+    setFilters(state, action) {
       state.categoryId=Number(action.payload.categoryId);
     }
   }
