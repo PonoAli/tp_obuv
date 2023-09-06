@@ -1,17 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  categoryId: ''
+interface FilterSliceState {
+  categoryId: number
+}
+
+const initialState: FilterSliceState = {
+  categoryId: 0
 }
 
 const filterSlice = createSlice ({
   name: 'filter',
   initialState,
   reducers: {
-    setCategoryId(state, action) {
+    setCategoryId(state, action: PayloadAction<number>) {
       state.categoryId = action.payload;
     },
-    setFilters(state, action) {
+    setFilters(state, action: PayloadAction<FilterSliceState>) {
       state.categoryId=Number(action.payload.categoryId);
     }
   }

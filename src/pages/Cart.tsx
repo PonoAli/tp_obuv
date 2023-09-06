@@ -1,13 +1,18 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import '../scss/components/cartModal.scss'
 import remove from '../img/btn-remove.svg'
-import { CartItems } from '../components/CartItems'
-import { CartEmpty } from '../components/CartEmpty'
+import { CartItems } from '../components/CartItems.tsx'
+import { CartEmpty } from '../components/CartEmpty.tsx'
+import { RootState } from '../redux/store'
 
-export const Cart = ({onClose}) => {
-  const {totalPrice, items} = useSelector(state => state.cart)
+type CartProps = {
+  onClose: () => void
+}
+
+export const Cart: React.FC<CartProps> = ({onClose}) => {
+  const {totalPrice, items} = useSelector((state: RootState) => state.cart)
 
   return (
     <div className='cart_overlay'>

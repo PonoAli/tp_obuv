@@ -1,12 +1,15 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { removeItem } from '../redux/slice/cartSlice'
+import { removeItem } from '../redux/slice/cartSlice.ts'
 
 import '../scss/components/cartModal.scss'
 import clear from '../img/trash 1.svg'
 
+type CartItemProps = {
+  id: number, imageUrl: string, title: string, price: number
+}
 
-export const CartItems = ({id, imageUrl, title, price}) => {
+export const CartItems: React.FC<CartItemProps> = ({id, imageUrl, title, price}) => {
   const dispatch = useDispatch()
   const onClickRemove = () => {
     if (window.confirm('Вы действительно хотите удалить товар?')) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import corb from '../img/empty-cart.jpg'
 
-export const CartEmpty = () => {
+export const CartEmpty: React.FC = () => {
   return (
     <div className='cartEmpty'>
       <img className='cartEmpty_img' src={corb} alt='corb' />

@@ -4,12 +4,17 @@ import cart from '../img/cart.svg'
 import '../scss/components/header.scss'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'react-router-dom';
+import { RootState } from '../redux/store';
+
+type HeaderProps = {
+  onClickCart: () => void;
+}
 
 
-export const Header = ({onClickCart}) => {
+export const Header: React.FC<HeaderProps> = ({onClickCart}) => {
 
-  const {items} = useSelector(state => state.cart);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0)
+  const {items} = useSelector((state:RootState) => state.cart);
+  const totalCount = items.reduce((sum: number, item) => sum + item.count, 0)
 
   return (
     <div className='wrapper'>

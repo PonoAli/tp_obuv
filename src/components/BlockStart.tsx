@@ -2,7 +2,7 @@ import React from 'react'
 import '../scss/components/header.scss'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-export const BlockStart = () => {
+export const BlockStart: React.FC = () => {
   return (
     <div className='wrapper'>
       <div className="container">

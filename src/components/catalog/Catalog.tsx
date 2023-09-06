@@ -3,26 +3,26 @@ import axios from 'axios';
 import qs from 'qs'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { SneakBlock } from '../SneakBlock/SneakBlock'
-import { Skeleton } from "../SneakBlock/Skeleton";
+import { SneakBlock } from '../SneakBlock/SneakBlock.tsx'
+import { Skeleton } from "../SneakBlock/Skeleton.tsx";
 import '../../scss/components/catalog.scss'
 import '../../components/SneakBlock/SneakBlock.scss'
 import '../../scss/components/sort.scss'
-import { Categories } from './Categories';
-import { setCategoryId, setFilters } from '../../redux/slice/filterSlice';
+import { Categories } from './Categories.tsx';
+import { setCategoryId, setFilters } from '../../redux/slice/filterSlice.ts';
 
-export const Catalog = () => {
+export const Catalog: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isSearch = useRef(true);
   const isMounted = useRef(false);
 
-  const {categoryId} = useSelector((state) => state.filter);
+  const {categoryId} = useSelector((state: any) => state.filter);
 
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const onChangeCategory = (id) => {
+  const onChangeCategory = (id: any) => {
     dispatch (setCategoryId(id))
   }
 
@@ -61,7 +61,6 @@ export const Catalog = () => {
           ...params
         })
       )
-      // isSearch.current=true
     }
   })
 
@@ -79,9 +78,7 @@ export const Catalog = () => {
           <div className='sort_container'>
             <div className='sort'>
               <h3>Подбор по параметрам</h3>
-              {/* <Sort value={sortType} onChangeSort={(id) => setSortType(id)} /> */}
               <Categories value={categoryId} onChangeCategory={onChangeCategory}/>
-              {/* <button className='sort_button'>Применить</button> */}
               <button onClick={() => {onChangeCategory([])}} className='sort_button'>Сбросить</button>
             </div>
           </div>
@@ -90,12 +87,11 @@ export const Catalog = () => {
             {
               isLoading ?
               [... new Array(3)].map((_, index) => <Skeleton key={index}/>)
-              : items.map((obj) => 
+              : items.map((obj: any) => 
               <SneakBlock 
               key={obj.id} {...obj}
               />
             )}
-          {/* <button className="sneakblock_button">Показать ещё</button> */}
         </div>
       </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import art from '../img/Mask Group.png'
 import '../scss/components/info.scss'
 
-export const Info = () => {
+export const Info: React.FC = () => {
   return (
     <div id='info' className='wrap_info'>
       <div className='container'>

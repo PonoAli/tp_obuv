@@ -3,7 +3,7 @@ import '../scss/components/contact.scss'
 import vk from '../img/VK.svg'
 import inst from '../img/Instagram.svg'
 
-export const Contaсt = () => {
+export const Contaсt: React.FC = () => {
   const [name, setName] = useState('');
   const [telephone, setTelephone] = useState('');
   const [nameDirty, setNameDirty] = useState(false);

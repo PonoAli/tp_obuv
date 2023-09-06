@@ -1,13 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../../redux/slice/cartSlice'
+import { addItem } from '../../redux/slice/cartSlice.ts'
 
 import './SneakBlock.scss'
 import addcart from '../../img/addcart.png'
+import { RootState } from '../../redux/store.ts'
 
-export const SneakBlock = ({id, title, price, imageUrl}) => {
+type SneakBlockProps = {
+  id: number, title: string, price: number, imageUrl: string
+}
+
+export const SneakBlock: React.FC<SneakBlockProps> = ({id, title, price, imageUrl}) => {
   const dispatch = useDispatch();
-  const cartItem = useSelector(state => state.cart.items.find(obj => obj.id === id))
+  const cartItem = useSelector((state: RootState) => state.cart.items.find((obj:any) => obj.id === id))
 
   const addedCount = cartItem ? cartItem.count : 0;
 
