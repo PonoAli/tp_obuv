@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tp_obuv/static/css/main.fa509000.css",
+    "main.js": "/tp_obuv/static/js/main.f9f7a3f0.js",
+    "static/media/Mask Group.png": "/tp_obuv/static/media/Mask Group.7f3c6367ff41832ab514.png",
+    "static/media/Intro-Book.ttf": "/tp_obuv/static/media/Intro-Book.cd9aac58a97d24734201.ttf",
+    "static/media/Intro-Bold.ttf": "/tp_obuv/static/media/Intro-Bold.62034b9159ac021d21e9.ttf",
+    "static/media/Intro-Regular.ttf": "/tp_obuv/static/media/Intro-Regular.f2b75892c7fc6e0047d5.ttf",
+    "static/media/empty-cart.jpg": "/tp_obuv/static/media/empty-cart.0366979184a44172f310.jpg",
+    "static/media/fontext.svg": "/tp_obuv/static/media/fontext.224457dca951610b411a.svg",
+    "static/media/Instagram.svg": "/tp_obuv/static/media/Instagram.79929456e9600f7810f62424d6bd796a.svg",
+    "static/media/trash 1.svg": "/tp_obuv/static/media/trash 1.36ac546f9392c7990737e9af9415a6a8.svg",
+    "static/media/VK.svg": "/tp_obuv/static/media/VK.23581b8a5444a17ca8f1160e19b54a94.svg",
+    "static/media/cart.svg": "/tp_obuv/static/media/cart.60510d892b8b3466f274810472c6f018.svg",
+    "index.html": "/tp_obuv/index.html",
+    "static/media/btn-remove.svg": "/tp_obuv/static/media/btn-remove.b1fef0aa93fbf25374f4991d23f900d8.svg",
+    "main.fa509000.css.map": "/tp_obuv/static/css/main.fa509000.css.map",
+    "main.f9f7a3f0.js.map": "/tp_obuv/static/js/main.f9f7a3f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa509000.css",
+    "static/js/main.f9f7a3f0.js"
+  ]
+}
