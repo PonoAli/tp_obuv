@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
 import axios from 'axios';
-import qs from 'qs'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { SneakBlock } from '../SneakBlock/SneakBlock'
@@ -42,35 +41,6 @@ export const Catalog: React.FC = () => {
     console.log('Ошибка при загрузке каталога')
   }
   }
-
-  // useEffect(() => {
-  //   if (isMounted.current) {
-  //     const queryString = qs.stringify({
-  //       categoryId
-  //     });
-  //     navigate(`?${queryString}`)
-  //   }
-  //   isMounted.current=true;
-  // }, [categoryId]);
-
-  // useEffect(() => {
-  //   if(window.location.search) {
-  //     const params = qs.parse(window.location.search.substring(1))
-
-  //     dispatch(
-  //       setFilters({
-  //         ...params
-  //       })
-  //     )
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   if (!isSearch.current) {
-  //     fetchSneakers();
-  //   }
-  //   isSearch.current = false;
-  // }, [categoryId])
 
   useEffect(() => {
     fetchSneakers()
